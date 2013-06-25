@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Opsway_SplunkLog>
+			<active>true</active>
+			<codePool>community</codePool>
+		</Opsway_SplunkLog>
+	</modules>
+</config>

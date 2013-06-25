@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <splunk translate="label" module="opsway_splunklog">
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <label>Splunk settings</label>
+            <tab>advanced</tab>
+            <groups>
+                <log translate="label" module="opsway_splunklog">
+                <show_in_default>1</show_in_default>
+                <show_in_website>0</show_in_website>
+                <show_in_store>0</show_in_store>
+                <label>General</label>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled logging</label>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <host translate="label">
+                            <label>Splunk host</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>IP address or Host</comment>
+                        </host>
+                        <default_port translate="label">
+                            <label>Default splunk UDP port</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Default Splunk UDP port for main data format as in graphit</comment>
+                        </default_port>
+                    </fields>
+                </log>
+            </groups>
+        </splunk>
+    </sections>
+</config>
