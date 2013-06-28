@@ -78,6 +78,7 @@ class Splunk
             }
 
             $metric = self::$config["namespace"] . '.' . $metric;
+            $data['timestamp'] = time();
             self::$_loggers[$format]->log($metric,Zend_Log::INFO,$data);
 
         } catch (Opsway_Log_Exception $e){
