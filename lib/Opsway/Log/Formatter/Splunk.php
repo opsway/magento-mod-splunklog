@@ -34,6 +34,9 @@ class Opsway_Log_Formatter_Splunk extends Zend_Log_Formatter_Simple
     {
         $event['metric'] = $event['message'];
         unset($event['message']);
+        array_walk($event,function(&$value,$key){
+            $value = preg_replace("/\s+/i","_",$value);
+        });
         return parent::format($event);
     }
 }
