@@ -6,6 +6,11 @@
         </Opsway_SplunkLog>
     </modules>
     <global>
+        <models>
+            <opsway_splunklog>
+                <class>Opsway_SplunkLog_Model</class>
+            </opsway_splunklog>
+        </models>
         <helpers>
             <opsway_splunklog>
                 <class>Opsway_SplunkLog_Helper</class>
@@ -15,6 +20,7 @@
             <splunk_log_default>
                 <observers>
                     <log_default>
+                        <type>singleton</type>
                         <class>opsway_splunklog/observer</class>
                         <method>loggingByDefault</method>
                     </log_default>
@@ -23,6 +29,7 @@
             <splunk_log_value_info>
                 <observers>
                     <log_value_info>
+                        <type>singleton</type>
                         <class>opsway_splunklog/observer</class>
                         <method>loggingByValueAndInfo</method>
                     </log_value_info>

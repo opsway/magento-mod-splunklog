@@ -32,7 +32,7 @@ class Opsway_SplunkLog_Model_Observer
 
         $data = array();
         foreach (Splunk::getRequiredKeysDataByFormat(Splunk::FORMAT_PORT_INT_STRING) as $key){
-            if (!isset($dataEvent[$key])) return;
+            if (!isset($dataEvent[$key])) continue;
             $data[$key] = $dataEvent[$key];
         }
 
