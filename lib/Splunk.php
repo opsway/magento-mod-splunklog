@@ -136,7 +136,7 @@ class Splunk
      * @return array
      */
     public static function getRequiredKeysDataByFormat($format){
-        $keys = explode(" ",str_ireplace("%", "", $format));
+        $keys = explode(" ",str_ireplace("%", "", self::$_formatters[$format]));
         $autoKeysForExclude = array('metric','timestamp');
         return array_diff($keys, $autoKeysForExclude);
     }
